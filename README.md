@@ -1,19 +1,26 @@
 # retrieve-similar-questions
 
+Create a conda virtual environment and install the dependencies as below
+
+```
+conda create -n quora python=3.6
+pip install -r requireents.txt
+```
+
 First train the model by running the following code
 
 ```
 python information_retrieval.py
 ```
 
-Then you have the trained model. 
+Now you have the trained model. Run the API.
 
 Run the app.py 
 ```
 flask run
 ```
 
-Use this to receive similar questions 
+Use this in the client to receive similar questions 
 ```
 curl --header "Content-Type: application/json" --request POST --data '{"question": "what is the best phone in the indian market?"}' http://127.0.0.1:5000/ 
 ```
