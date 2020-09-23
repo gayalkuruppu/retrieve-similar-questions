@@ -540,8 +540,8 @@ writer = csv.DictWriter(a, delimiter='\t', lineterminator='\n',fieldnames=header
 fileEmpty = os.stat(filename).st_size == 0
 writer.writeheader()
 for i in range(len(main_array)):
-    #a.write((str(query_questions.iloc[i])).split('\n')[0].split('    ')[1]+'\t'+str(data_questions.iloc[main_array[i][0]]).split('\n')[0].split('    ')[1] +'\t'+ str(data_questions.iloc[main_array[i][1]]).split('\n')[0].split('    ')[1] +'\t'+ str(data_questions.iloc[main_array[i][2]]).split('\n')[0].split('    ')[1] + "\n")
-    a.write(((query_questions.iloc[i]).encode('utf-8')).split('\n')[0].split('    ')[1]+'\t'+(data_questions.iloc[main_array[i][0]]).encode('utf-8').split('\n')[0].split('    ')[1] +'\t'+ (data_questions.iloc[main_array[i][1]]).encode('utf-8').split('\n')[0].split('    ')[1] +'\t'+ (data_questions.iloc[main_array[i][2]]).encode('utf-8').split('\n')[0].split('    ')[1] + "\n")
+    a.write((str(query_questions.iloc[i])).split('\n')[0].split('    ')[1]+'\t'+str(data_questions.iloc[main_array[i][0]]).split('\n')[0].split('    ')[1] +'\t'+ str(data_questions.iloc[main_array[i][1]]).split('\n')[0].split('    ')[1] +'\t'+ str(data_questions.iloc[main_array[i][2]]).split('\n')[0].split('    ')[1] + "\n")
+    #a.write(((query_questions.iloc[i]).encode('utf-8')).split('\n')[0].split('    ')[1]+'\t'+(data_questions.iloc[main_array[i][0]]).encode('utf-8').split('\n')[0].split('    ')[1] +'\t'+ (data_questions.iloc[main_array[i][1]]).encode('utf-8').split('\n')[0].split('    ')[1] +'\t'+ (data_questions.iloc[main_array[i][2]]).encode('utf-8').split('\n')[0].split('    ')[1] + "\n")
 a.close()
 
 data_brute = pd.read_csv('output_brute_force.csv',sep='\t')
@@ -613,7 +613,8 @@ fileEmpty = os.stat(filename).st_size == 0
 writer.writeheader()
 
 for i in range(len(array)):
-    a.write(((query_questions.iloc[i]).encode('utf-8')).split('\n')[0].split('    ')[1] + '\t' + (data_questions.iloc[array[i][0]]).encode('utf-8').split('\n')[0].split('    ')[1] + '\t' + (data_questions.iloc[array[i][1]]).encode('utf-8').split('\n')[0].split('    ')[1] + '\t' + (data_questions.iloc[array[i][2]]).encode('utf-8').split('\n')[0].split('    ')[1] + "\n")
+    #a.write(((query_questions.iloc[i]).encode('utf-8')).split('\n')[0].split('    ')[1] + '\t' + (data_questions.iloc[array[i][0]]).encode('utf-8').split('\n')[0].split('    ')[1] + '\t' + (data_questions.iloc[array[i][1]]).encode('utf-8').split('\n')[0].split('    ')[1] + '\t' + (data_questions.iloc[array[i][2]]).encode('utf-8').split('\n')[0].split('    ')[1] + "\n")
+    a.write((str(query_questions.iloc[i])).split('\n')[0].split('    ')[1]+'\t'+str(data_questions.iloc[main_array[i][0]]).split('\n')[0].split('    ')[1] +'\t'+ str(data_questions.iloc[main_array[i][1]]).split('\n')[0].split('    ')[1] +'\t'+ str(data_questions.iloc[main_array[i][2]]).split('\n')[0].split('    ')[1] + "\n")
 a.close()
 
 data_kmeans = pd.read_csv('output_kmeans.csv',sep='\t')

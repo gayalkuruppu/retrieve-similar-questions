@@ -9,3 +9,6 @@ nltk
 gensim 
 numpy
 pandas
+flask
+flask-restful
+
