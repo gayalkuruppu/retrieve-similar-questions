@@ -5,12 +5,17 @@ Create a conda virtual environment and install the dependencies as below
 ```
 conda create -n quora python=3.6
 pip install -r requirements.txt
+conda activate quora
 ```
+
 
 First train the model by running the following code
 
 ```
-conda activate quora
+wget -c "https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz"
+gunzip "GoogleNews-vectors-negative300.bin.gz"
+mkdir clusters
+
 python information_retrieval.py
 ```
 
