@@ -10,6 +10,7 @@ pip install -r requireents.txt
 First train the model by running the following code
 
 ```
+conda activate quora
 python information_retrieval.py
 ```
 
