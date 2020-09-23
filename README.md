@@ -4,7 +4,7 @@ Create a conda virtual environment and install the dependencies as below
 
 ```
 conda create -n quora python=3.6
-pip install -r requireents.txt
+pip install -r requirements.txt
 ```
 
 First train the model by running the following code
