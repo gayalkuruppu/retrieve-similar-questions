@@ -21,9 +21,14 @@ python information_retrieval.py
 
 Now you have the trained model. Run the API.
 
-Run the app.py 
+Run this code in terminal and copy the response to the clipboard
 ```
-flask run
+which python
+```
+
+Now run the app.py 
+```
+sudo <which python response> app.py
 ```
 
 Use this in the client to receive similar questions 
