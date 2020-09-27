@@ -1,5 +1,13 @@
 # retrieve-similar-questions
 
+To install conda if you do not have anaconda installed
+
+```
+wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
+bash Anaconda3-2020.02-Linux-x86_64.sh
+```
+To install for 32 bits version remove "_64" and for python2 change anaconda3 to anaconda2
+
 Create a conda virtual environment and install the dependencies as below
 
 ```
